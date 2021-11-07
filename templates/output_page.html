@@ -1,0 +1,45 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Result of Startup Status Predication </title>
+    <style> 
+        h2 {text-align: center;}
+        h3 {text-align: center;}
+    </style>
+</head>
+<body>
+    <h3> Your Startup Predication is</h3><h2> {{model_output}}</h2>
+    
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Status of startup</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+
+      <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+</head>
+
+<body>
+
+  <div class="table-users">
+   <div class="header">Prediction</div>
+
+      <h2>Your Startup Predication is <h1> {{model_output}} </h1> </h2>
+</div>
+
+
+
+</body>
+
+</html>

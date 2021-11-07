@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Search Page</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %} 
+    <div class="content">
+        <h1 style="text-align:center"> Startup Status Predications </h1>
+
+    <div class="form">
+        <form action="/predict" method="POST">
+            <label>Founded At </label><input type="text" name="founded_at" id="founded_at" ></input> </br><br>
+            
+            <label>Funding Rounds </label>  <input type="text" name="funding_rounds" id="funding_rounds" ></input> </br> <br>
+
+            <label> Funding Total USD </label><input type="text" name="funding_total_usd" id="funding_total_usd" ></input> </br> <br>
+
+            <label> Milestones </label> <input type="text" name="milestones" id="milestones" ></input> </br> <br>
+
+            <label> Relationships</label> <input type="text" name="relationships" id="relationships" ></input> </br> <br>
+
+            <label> Lat </label> <input type="text" name="lat" id="lat" ></input> </br> <br>
+
+            <label> Lng </label> <input type="text" name="lng" id="lng" ></input> </br> <br>
+            
+            <label for="category_code">Category Code:</label><br><br>
+
+            <select name="category_code" id="category_code">
+                <option value="category_code_biotech"> category_code_biotech</option>
+                <option value="category_code_consulting">category_code_consulting</option>
+                <option value="category_code_ecommerce">category_code_ecommerce</option>
+                <option value="category_code_education">category_code_education</option>
+                <option value="category_code_enterprise">category_code_enterprise</option>
+                <option value="category_code_games_video">category_code_games_video</option>
+                <option value="category_code_hardware">category_code_hardware</option>
+                <option value="category_code_mobile">category_code_mobile</option>
+                <option value="category_code_network_hosting">category_code_network_hosting</option>
+                <option value="category_code_other">category_code_other</option>
+                <option value="category_code_public_relations">category_code_public_relations</option>
+                <option value="category_code_search">category_code_search</option>
+                <option value="category_code_software">category_code_software</option>
+                <option value="category_code_web">category_code_web</option>            
+            </select><br><br>
+
+            <label for="country_code">Country Code</label><br> <br>
+            <select name="country_code" id="country_code">
+                <option value="country_code_BRA">country_code_BRA</option>
+                <option value="country_code_CAN">country_code_CAN</option>
+                <option value="country_code_DEU">country_code_DEU</option>
+                <option value="country_code_ESP">country_code_ESP</option>
+                <option value="country_code_FRA">country_code_FRA</option>
+                <option value="country_code_GBR">country_code_GBR</option>
+                <option value="country_code_IND">country_code_IND</option>
+                <option value="country_code_IRL">country_code_IRL</option>
+                <option value="country_code_ISR">country_code_ISR</option>
+                <option value="country_code_NLD">country_code_NLD</option>
+                <option value="country_code_USA">country_code_USA</option>
+                <option value="country_code_other">country_code_other</option>           
+            </select>           
+
+            <center> </br> <input type="submit" value="Predict"> </center>
+
+        </form>
+    </div>
+    </div>   
+{% endblock %}
